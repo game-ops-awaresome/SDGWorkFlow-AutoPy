@@ -2,6 +2,8 @@
 import time as T
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
+
 
 class WorkFlowOperate():
     def Log_newuser(self, driver, baseURL, loginuser):
@@ -21,6 +23,10 @@ class WorkFlowOperate():
     def Into_FlowSheet(self, driver, FlowID):
         driver.find_element_by_link_text(FlowID).click()
         driver.switch_to_window(driver.window_handles[1])
+
+    def Start_FlowSheet(self, driver, FlowType):
+        driver.find_element_by_link_text('发起流程').click()
+        self.Into_FlowSheet(driver, FlowType)
 
     def Sheet_Operate(self, driver, Operate):
         words = driver.find_element(By.ID, "ctl00_conApproveSave_k2tbComment")
@@ -43,15 +49,15 @@ class WorkFlowOperate():
         
 if __name__ == "__main__":
     user = "zhaoruntong.falcon"
-    flow = "GMSWBRWD18000098"
+    flow = "盛大游戏考勤申请流程"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSystemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192.168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'
     driver = webdriver.Ie()
 
 
     mission = WorkFlowOperate()
     mission.Log_newuser(driver, url, user)
-    mission.Into_FlowSheet(driver, flow)
-    mission.Sheet_Operate(driver, "Pass")
-    mission.Log_out(driver)
+    mission.Start_FlowSheet(driver, flow)
+    #mission.Sheet_Operate(driver, "Pass")
+    #mission.Log_out(driver)
 
 
