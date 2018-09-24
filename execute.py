@@ -8,14 +8,14 @@ from selenium.webdriver.support.select import Select
 class WorkFlowOperate():
     def Log_newuser(self, driver, baseURL, loginuser):
         driver.implicitly_wait(30) # 隐性等待，最长等30秒
-        driver.get(baseURL)
-        username = driver.find_element(By.ID, "UserName")
-        username.clear()
-        print ('~$LoginID : '+loginuser)
-        username.send_keys(loginuser)
-        password = driver.find_element(By.ID, "password1").send_keys("c")
-        login = driver.find_element_by_xpath("//html//body//div[2]//div[2]//table//tbody//tr[6]//td[1]//input")
-        login.click()
+        driver.get(baseURL)#get请求页面
+        username = driver.find_element(By.ID, "UserName")#登录用户名栏抓取
+        username.clear()#清空栏内缓存信息
+        print ('~$LoginID : '+loginuser)#监视当前需要登入的账户
+        username.send_keys(loginuser)#输入用户名
+        password = driver.find_element(By.ID, "password1").send_keys("c")#测试环境下随意密码
+        login = driver.find_element_by_xpath("//html//body//div[2]//div[2]//table//tbody//tr[6]//td[1]//input")#抓取“登录”
+        login.click()#点击
         
     def Log_out(self,driver):
         driver.close()
