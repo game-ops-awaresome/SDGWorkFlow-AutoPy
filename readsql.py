@@ -18,6 +18,7 @@ class SQLOperate():
         # 关闭数据库连接
         conn.close()
         return data
+        
 if __name__ == "__main__":
     mission = SQLOperate()
     print(mission.GetLoginname( '闵银花' ))
