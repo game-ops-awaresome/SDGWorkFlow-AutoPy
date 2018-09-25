@@ -3,11 +3,11 @@ import pymysql
 class SQLOperate():
     def GetLoginname(self, name):
         conn = pymysql.connect(
-            host='10.246.190.99',
-            port=3306,
-            user='outsourcing',
-            password='99Outsourcing!@#',
-            database="outsourcing",
+            hos t= '10.246.190.99',
+            port = 3306,
+            user = 'outsourcing',
+            password = '99Outsourcing!@#',
+            database = "outsourcing",
             ) 
         cursor = conn.cursor()
         # 使用 execute()  方法执行 SQL 查询
