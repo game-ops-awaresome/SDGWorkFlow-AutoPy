@@ -19,7 +19,7 @@ class WorkFlowOperate():
         print ('~$login success')
         
     def Log_out(self,driver):
-        driver.close()
+        driver.quit()
         
     def Into_FlowSheet(self, driver, FlowID):
         driver.find_element_by_link_text(FlowID).click()
