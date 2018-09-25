@@ -50,16 +50,16 @@ class WorkFlowOperate():
         driver.switch_to_window(driver.window_handles[0])
         
 if __name__ == "__main__":
-    user = "赵润彤.Falcon"
-    flow = "GMSWBRWD18000102"
+    user = "zhaoruntong.falcon"
+    flow = "盛大游戏考勤申请流程"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSystemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192.168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'
     driver = webdriver.Ie()
 
 
     mission = WorkFlowOperate()
     mission.Log_newuser(driver, url, user)
-    mission.Into_FlowSheet(driver, flow)
-    mission.Sheet_Operate(driver, 'Pass')
+    mission.Start_FlowSheet(driver, flow)
+    #mission.Sheet_Operate(driver, 'Pass')
     mission.Log_out(driver)
 
 
