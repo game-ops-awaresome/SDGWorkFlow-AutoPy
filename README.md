@@ -5,7 +5,7 @@
 
 - **Python** (`3.5.4`及以上) 
 - **Selenium** (`3.14.1`) and *webdriver* (`Ie`for Selenium`3.14.0`)
-- **pymysql** (`0.9.2`)
+- **pymysql** (`0.9.2`及以上)
 
 
 
