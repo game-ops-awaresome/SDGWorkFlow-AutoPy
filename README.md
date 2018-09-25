@@ -1,4 +1,4 @@
-# WorkFlow-AutoPy
+﻿# WorkFlow-AutoPy
 **SDGWorkFlow-AutoPy** 是盛大游戏工作流系统自动化测试及过流脚本的python支持包
 ### 基础支持说明 ###
 编译环境及工具包:
@@ -10,17 +10,16 @@
 
 
 
-##execute.py##
+##execute.py<br>
 **execute.py**为脚本的浏览器操作包<br>
 导入方法<br>
 `import execute as ex `
 
-##inputlist.py##
+##inputlist.py<br>
 **inputlist.py**为脚本的审批信息拉取及表单信息拉取操作包<br>
 导入方法<br>
 `import inputlist as ls `
 
-##readsql.py##
-**readsql.py**为脚本的数据库操作包<br>
+##readsql.py<br>**readsql.py**为脚本的数据库操作包<br>
 导入方法<br>
 `import readsql as sq`
