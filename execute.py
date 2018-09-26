@@ -22,8 +22,14 @@ class WorkFlowOperate():
         driver.quit()
         
     def Into_FlowSheet(self, driver, FlowID):
-        driver.find_element_by_id('lbApply').click()
-        driver.find_element_by_link_text(FlowID).click()
+        try:
+            driver.find_element_by_id('lbTask').click()
+            driver.find_element_by_link_text(FlowID).click()
+        except:
+            driver.find_element_by_id('lbApply').click()
+            driver.find_element_by_id('conMyApply_lbStatus1').click()
+            driver.find_element_by_id('conMyApply_lvData_lbStartTime').click()
+            driver.find_element_by_link_text(FlowID).click()
         driver.switch_to_window(driver.window_handles[1])
         print ('Into flowsheet :'+FlowID)
 

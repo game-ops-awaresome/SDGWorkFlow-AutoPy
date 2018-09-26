@@ -18,7 +18,6 @@ stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
     action.Log_newuser(driver, url, user)
     action.Into_FlowSheet(driver, flow)
     flowList = ID.Get_Chain(driver)
-    action.Sheet_Operate(driver, "Pass")
     action.Log_out(driver)
     T.sleep(10)
 
