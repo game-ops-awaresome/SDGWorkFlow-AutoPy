@@ -21,12 +21,8 @@ class ChainOperate():
         for i in range(len(name)):
             ChainID.append(getway.GetLoginname(name[i]))                   
         return ChainID
-    def Get_lastFlowID(self, driver):
-        driver.find_element_by_id('lbApply').click()
-        driver.find_element_by_id('conMyApply_lbStatus1').click()
-        driver.find_element_by_id('conMyApply_lvData_lbStartTime').click()
-        driver.find_element_by_id('conMyApply_lvData_hlProcTitle_0').click()
-        driver.switch_to_window(driver.window_handles[1])
+    
+    def Get_FlowID(self, driver):
         titleelems = driver.find_element_by_id('ctl00_Folio').get_attribute("value")        
         return titleelems
 
@@ -42,5 +38,6 @@ stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
     c = ex.WorkFlowOperate()
     Mission = ChainOperate()
     c.Log_newuser(driver, url, user)
-    print(Mission.Get_lastFlowID(driver))
+    c.Into_lastFlow(driver)
+    print(Mission.Get_FlowID(driver))
     #c.Log_out(driver)

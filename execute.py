@@ -22,9 +22,17 @@ class WorkFlowOperate():
         driver.quit()
         
     def Into_FlowSheet(self, driver, FlowID):
+        driver.find_element_by_id('lbApply').click()
         driver.find_element_by_link_text(FlowID).click()
         driver.switch_to_window(driver.window_handles[1])
         print ('Into flowsheet :'+FlowID)
+
+    def Into_lastFlow(self, driver):
+        driver.find_element_by_id('lbApply').click()
+        driver.find_element_by_id('conMyApply_lbStatus1').click()
+        driver.find_element_by_id('conMyApply_lvData_lbStartTime').click()
+        driver.find_element_by_id('conMyApply_lvData_hlProcTitle_0').click()
+        driver.switch_to_window(driver.window_handles[1])
 
     def Start_FlowSheet(self, driver, FlowType):
         driver.find_element_by_link_text('发起流程').click()
