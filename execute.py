@@ -7,7 +7,7 @@ from selenium.webdriver.support.select import Select
 
 class WorkFlowOperate():
     def Log_newuser(self, driver, baseURL, loginuser):
-        driver.implicitly_wait(30) # 隐性等待，最长等30秒
+        driver.implicitly_wait(10) # 隐性等待，最长等30秒
         driver.get(baseURL)#get请求页面
         username = driver.find_element(By.ID, "UserName")#登录用户名栏抓取
         username.clear()#清空栏内缓存信息
