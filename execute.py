@@ -7,7 +7,7 @@ from selenium.webdriver.support.select import Select
 
 class WorkFlowOperate():
     def Log_newuser(self, driver, baseURL, loginuser):
-        driver.implicitly_wait(10) # 隐性等待，最长等30秒
+        driver.implicitly_wait(10) # 隐性等待，最长等10秒
         driver.get(baseURL)#get请求页面
         username = driver.find_element(By.ID, "UserName")#登录用户名栏抓取
         username.clear()#清空栏内缓存信息
@@ -64,16 +64,16 @@ class WorkFlowOperate():
         driver.switch_to_window(driver.window_handles[0])
         
 if __name__ == "__main__":
-    user = "zhaoruntong.falcon"
-    flow = "盛大游戏考勤申请流程"
+    user = "lihangfei.echo"
+    flow = "GMSWBZXD18000014"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSystemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192.168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'
     driver = webdriver.Ie()
 
 
     mission = WorkFlowOperate()
     mission.Log_newuser(driver, url, user)
-    mission.Start_FlowSheet(driver, flow)
-    #mission.Sheet_Operate(driver, 'Pass')
+    mission.Into_FlowSheet(driver, flow)
+    mission.Sheet_Operate(driver, 'Repulse')
     mission.Log_out(driver)
 
 
