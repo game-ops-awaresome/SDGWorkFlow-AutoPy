@@ -27,9 +27,9 @@ class ChainOperate():
         driver.find_element_by_id('conMyApply_lvData_lbStartTime').click()
         driver.find_element_by_id('conMyApply_lvData_hlProcTitle_0').click()
         driver.switch_to_window(driver.window_handles[1])
-        titleelems = driver.find_element_by_id('ctl00_Folio').get_attribute("value")
-        
+        titleelems = driver.find_element_by_id('ctl00_Folio').get_attribute("value")        
         return titleelems
+
 
 if __name__ == "__main__":
     user = "zhaoruntong.falcon"

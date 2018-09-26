@@ -3,7 +3,7 @@ import pymysql
 class SQLOperate():
     def GetLoginname(self, name):
         conn = pymysql.connect(
-            hos t= '10.246.190.99',
+            host= '10.246.190.99',
             port = 3306,
             user = 'outsourcing',
             password = '99Outsourcing!@#',
