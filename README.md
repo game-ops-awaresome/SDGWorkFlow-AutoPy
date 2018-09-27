@@ -26,6 +26,13 @@
 ### 网页及工作流操作脚本类：`WorkFlowOperate()`
 **实例化：**`exmple = ex.WorkFlowOperate()`<br>
 
+- **登入新账户：**` Log_newuser(self, driver, baseURL, loginuser)`<br>
+- **登出：**` Log_out(self,driver)`<br>
+- **进入流程单：**` Into_FlowSheet(self, driver, FlowID)`<br>
+- **进入最近一次发起流程：**` Into_lastFlow(self, driver)`<br>
+- **发起流程：**` Start_FlowSheet(self, driver, FlowType)`<br>
+- **流程单操作：**` Sheet_Operate(self, driver, Operate)`<br>
+
 
 
 
@@ -44,6 +51,9 @@
 ### 信息抓取操作脚本类：`ChainOperate()`
 **实例化：**`example = ls.ChainOperate()`<br>
 
+- **拉取审批链：**` Get_Chain(self, driver)`<br>
+- **拉取单号：**` Get_FlowID(self, driver)`<br>
+
 
 
 
@@ -57,3 +67,5 @@
 <br>
 ### SQL数据库操作脚本类：`SQLOperate()`
 **实例化：**`example = sq.SQLOperate()`<br>
+
+- **从数据库读取账号：**` GetLoginname(self, name)`<br>
