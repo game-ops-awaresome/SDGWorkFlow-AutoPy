@@ -9,7 +9,8 @@
 - **xlwt** (`1.3.0`)
 
 
-
+支持包使用前，务必实例化浏览器驱动<br>
+`from selenium import webdriver `
 
 ## execute.py  <br>
 
