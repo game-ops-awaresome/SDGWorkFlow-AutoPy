@@ -7,7 +7,7 @@ from selenium import webdriver
 
 if __name__ == "__main__":
     user = "zhaoruntong.falcon"
-    flow = "GMSWBZXD18000015"
+    flow = "GMSWBRWD18000101"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSy\
 stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
 .168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'
@@ -28,3 +28,5 @@ stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
         action.Sheet_Operate(driver, "Pass")
         action.Log_out(driver)
         T.sleep(10)
+
+
