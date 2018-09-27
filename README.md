@@ -10,7 +10,9 @@
 
 
 支持包使用前，务必实例化浏览器驱动<br>
-`from selenium import webdriver `
+`from selenium import webdriver `<br>
+`driver = webdriver.Ie()`
+
 
 ## execute.py  <br>
 
