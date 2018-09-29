@@ -21,7 +21,7 @@ root.title("SDGWorkFlowScript")
 root.geometry('1100x650')
 root.resizable(width=False, height=False)
 
-photo = PhotoImage(file='logo.png')
+photo = PhotoImage(file='__picture__/logo.png')
 img_label = Label(root, imag=photo)
 img_label.place(x=0,y=0,anchor='nw')
 
