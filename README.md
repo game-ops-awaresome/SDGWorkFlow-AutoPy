@@ -72,3 +72,20 @@
 **实例化：**`example = sq.SQLOperate()`<br>
 
 - **从数据库读取账号：**` GetLoginname(self, name)`<br>
+
+
+## passroll.py <br>
+**passroll.py**为脚本的通过流程操作包<br>
+### 导入支持包：<br>
+`from passroll import *`
+<br>
+### *passroll.py*基础环境包函:<br>
+`import time as T`<br>
+`import execute as ex`<br>
+`import inputlist as ls`<br>
+`from selenium import webdriver`<br>
+<br>
+### SQL数据库操作脚本类：`SQLOperate()`
+**实例化：**`example = Passroll()`<br>
+
+- **通过流程：**` passoperate(self, driver, url, user, flow)`<br>
