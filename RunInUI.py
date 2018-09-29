@@ -23,7 +23,7 @@ root.resizable(width=False, height=False)
 
 photo = PhotoImage(file='logo.png')
 img_label = Label(root, imag=photo)
-img_label.place(x=20,y=5,anchor='nw')
+img_label.place(x=0,y=0,anchor='nw')
 
 wordF = Label(root, text="LogingID\t: \n\nFlowID\t: ", fg = "blue", justify=LEFT)
 wordF.place(x=10,y=90,anchor='nw')
@@ -36,10 +36,10 @@ LoginID.place(x=90,y=90,anchor='nw')
 f = StringVar()
 f.set('GMSWBRWD18000108')
 flowID = Entry(root, fg = 'green', textvariable=f, width = 25)
-flowID.place(x=90,y=135,anchor='nw')
+flowID.place(x=90,y=127,anchor='nw')
 
 
-Button(root,text = 'PassFlow',width = 10,height =1, command = PressButton).place(x=100,y=175,anchor='nw')
+Button(root,text = 'PassFlow',width = 10,height =1, command = PressButton).place(x=20,y=160,anchor='nw')
 
 
 root.mainloop()
