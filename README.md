@@ -85,7 +85,7 @@
 `import inputlist as ls`<br>
 `from selenium import webdriver`<br>
 <br>
-### SQL数据库操作脚本类：`SQLOperate()`
+### 通过流程操作类：`SQLOperate()`
 **实例化：**`example = Passroll()`<br>
 
 - **通过流程：**` passoperate(self, driver, url, user, flow)`<br>

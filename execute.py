@@ -16,6 +16,7 @@ class WorkFlowOperate():
         print ('~$LoginID : '+loginuser)#监视当前需要登入的账户
         username.send_keys(loginuser)#输入用户名
         password = driver.find_element(By.ID, "password1").send_keys("c")#测试环境下随意密码
+        password.submit()
         login = driver.find_element_by_xpath("//html//body//div[2]//div[2]//table//tbody//tr[6]//td[1]//input")#抓取“登录”
         login.click()#点击
         print ('~$login success')
