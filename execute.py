@@ -45,7 +45,7 @@ class WorkFlowOperate():
 
     def Start_FlowSheet(self, driver, FlowType):
         driver.find_element_by_link_text('发起流程').click()
-        self.Into_FlowSheet(driver, FlowType)
+        driver.find_element_by_link_text(FlowType).click()
 
     def Sheet_Operate(self, driver, Operate):
         words = driver.find_element(By.ID, "ctl00_conApproveSave_k2tbComment")
