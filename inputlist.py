@@ -28,11 +28,13 @@ class ChainOperate():
             if '[当前审批]' in titleelems[i].text:
                 record = True
             if record == True and sele == False:
-                name.append(re.sub(u"\\（.*?\\）|\\(.*?\\)|\\{.*?}|\\[.*?]|\\ ", "", titleelems[i].text))
+                name.append(re.sub(u"\\（.*?\\）|\\(.*?\\)|\\{.*?}|\\[.*?]", "", titleelems[i].text))
             if record == False and sele == True:
-                name.append(re.sub(u"\\（.*?\\）|\\(.*?\\)|\\{.*?}|\\[.*?]|\\ ", "", titleelems[i].text))
-        for j in range(len(name)):
-            ChainID.append(getway.GetLoginname(name[j]))
+                name.append(re.sub(u"\\（.*?\\）|\\(.*?\\)|\\{.*?}|\\[.*?]", "", titleelems[i].text))
+        for k in range(len(name)):
+            str_list = name[k].split()
+            for j in range(len(str_list)):
+                ChainID.append(getway.GetLoginname(str_list[j]))  
         if sele == True and record == False:
             api = ex.WorkFlowOperate()
             api.Sheet_Operate(driver, "Pass")
@@ -45,7 +47,7 @@ class ChainOperate():
 
 if __name__ == "__main__":
     user = "zhaoruntong.falcon"
-    flow = "GMSWBZXD18000015"
+    flow = "GMSWBRWD18000127"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSy\
 stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
 .168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'
