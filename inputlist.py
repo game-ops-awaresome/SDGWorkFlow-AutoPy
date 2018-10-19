@@ -23,9 +23,8 @@ class ChainOperate():
         print(sele)
         print('一共找到 '+str(len(titleelems))+' 个审批人！:')
         for i in range(len(titleelems)):
-            print(titleelems[i].text+'\t----', end=' ')
-            print(character[i].text)
-            if '[当前审批]' in titleelems[i].text:
+            print(titleelems[i].text+'\t----')
+            if '当前审批' in titleelems[i].text:
                 record = True
             if record == True and sele == False:
                 name.append(re.sub(u"\\（.*?\\）|\\(.*?\\)|\\{.*?}|\\[.*?]", "", titleelems[i].text))
@@ -47,7 +46,7 @@ class ChainOperate():
 
 if __name__ == "__main__":
     user = "zhaoruntong.falcon"
-    flow = "GMSWBRWD18000127"
+    flow = "GMSWBRWD18000131"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSy\
 stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
 .168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'

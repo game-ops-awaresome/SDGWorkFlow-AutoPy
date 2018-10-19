@@ -25,7 +25,7 @@ class Passroll():
 
 if __name__ == "__main__":
     user = "zhaoruntong.falcon"
-    flow = "GMSWBRWD18000127"
+    flow = "GMSWBRWD18000131"
     url = 'http://10.246.190.50:9554/Sso.do/?GSubSystemCode=&SubSy\
 stemCode=1134&EntranceCode=16&RType=1&ReturnUrl=http%3a%2f%2f192\
 .168.100.150%2fSDG.Workflow.Platform%2fLogin.aspx'
